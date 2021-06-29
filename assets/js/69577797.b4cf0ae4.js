@@ -1,0 +1,1 @@
+(self.webpackChunkkevin_rohn_github_io=self.webpackChunkkevin_rohn_github_io||[]).push([[994],{2812:function(e){"use strict";e.exports=JSON.parse('{"allTagsPath":"/blog/tags","slug":"general","name":"general","count":1,"permalink":"/blog/tags/general"}')}}]);
