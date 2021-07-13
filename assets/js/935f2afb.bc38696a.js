@@ -1,0 +1,1 @@
+(self.webpackChunkkevin_rohn_github_io=self.webpackChunkkevin_rohn_github_io||[]).push([[53],{9054:function(e){"use strict";e.exports=JSON.parse('{"pluginId":"default","version":"current","label":"Next","isLast":true,"docsSidebars":{"defaultSidebar":[{"type":"link","label":"index","href":"/docs/index"}]},"permalinkToSidebar":{"/docs/index":"defaultSidebar"}}')}}]);

@@ -7,6 +7,7 @@
     <link rel="alternate" href="https://KevinRohn.github.io/blog"/>
     <subtitle>Kevin`s dev life Blog</subtitle>
     <icon>https://KevinRohn.github.io/img/favicon.ico</icon>
+    <rights>Kev</rights>
     <entry>
         <title type="html"><![CDATA[Welcome to my developer site]]></title>
         <id>welcome</id>
