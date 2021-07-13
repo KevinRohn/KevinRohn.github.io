@@ -12,13 +12,11 @@ module.exports = {
   favicon: 'img/favicon.ico',
   organizationName: 'KevinRohn', // Usually your GitHub org/user name.
   projectName: 'KevinRohn.github.io', // Usually your repo name.
-  trailingSlash: false,
+  //trailingSlash: false,
   themeConfig: {
     navbar: {
-      title: 'Kevin`s dev life',
       items: [
-
-        {to: '/blog', label: 'Blog', position: 'left'},
+        { to: '/blog', label: 'Blog', position: 'left' },
         {
           href: 'https://github.com/facebook/docusaurus',
           label: 'GitHub',
@@ -39,17 +37,97 @@ module.exports = {
     [
       '@docusaurus/preset-classic',
       {
-        docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/',
-        },
+        pages: {},
+        docs: {},
         blog: {
+          /**
+           * Path to data on filesystem relative to site dir.
+           */
+          path: 'blog',
+          /**
+           * Base url to edit your site.
+           * Docusaurus will compute the final editUrl with "editUrl + relativeDocPath"
+           */
+          editUrl: 'https://github.com/facebook/docusaurus/edit/master/website/',
+          /**
+           * For advanced cases, compute the edit url for each Markdown file yourself.
+           */
+          editUrl: ({ locale, blogDirPath, blogPath, permalink }) => {
+            return `https://github.com/facebook/docusaurus/edit/master/website/${blogDirPath}/${blogPath}`;
+          },
+          /**
+           * Useful if you commit localized files to git.
+           * When Markdown files are localized, the edit url will target the localized file,
+           * instead of the original unlocalized file.
+           * Note: this option is ignored when editUrl is a function
+           */
+          editLocalizedFiles: false,
+          /**
+           * Blog page title for better SEO
+           */
+          blogTitle: 'Blog title',
+          /**
+           * Blog page meta description for better SEO
+           */
+          blogDescription: 'Blog',
+          /**
+           * Number of blog post elements to show in the blog sidebar
+           * 'ALL' to show all blog posts
+           * 0 to disable
+           */
+          blogSidebarCount: 5,
+          /**
+           * Title of the blog sidebar
+           */
+          blogSidebarTitle: 'All our posts',
+          /**
+           * URL route for the blog section of your site.
+           * *DO NOT* include a trailing slash.
+           */
+          routeBasePath: 'blog',
+          include: ['*.md', '*.mdx'],
+          postsPerPage: 10,
+
+
+          /**
+           * Theme components used by the blog pages.
+           */
+          //blogListComponent: '@theme/BlogListPage',
+          //blogPostComponent: '@theme/BlogPostPage',
+          //blogTagsListComponent: '@theme/BlogTagsListPage',
+          //blogTagsPostsComponent: '@theme/BlogTagsPostsPage',
+          /**
+           * Remark and Rehype plugins passed to MDX.
+           */
+          remarkPlugins: [
+            /* require('remark-math') */
+          ],
+          rehypePlugins: [],
+          /**
+           * Custom Remark and Rehype plugins passed to MDX before
+           * the default Docusaurus Remark and Rehype plugins.
+           */
+          beforeDefaultRemarkPlugins: [],
+          beforeDefaultRehypePlugins: [],
+          /**
+           * Truncate marker, can be a regex or string.
+           */
+          truncateMarker: /<!--\s*(truncate)\s*-->/,
+          /**
+           * Show estimated reading time for the blog post.
+           */
           showReadingTime: true,
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/blog/',
+          /**
+           * Blog feed.
+           * If feedOptions is undefined, no rss feed will be generated.
+           */
+          feedOptions: {
+            type: 'all', // required. 'rss' | 'feed' | 'all'
+            title: '', // default to siteConfig.title
+            description: '', // default to  `${siteConfig.title} Blog`
+            copyright: 'Kev',
+            language: undefined, // possible values: http://www.w3.org/TR/REC-html40/struct/dirlang.html#langcodes
+          },
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
