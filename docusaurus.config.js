@@ -7,7 +7,7 @@ module.exports = {
   tagline: 'Dinosaurs are cool',
   url: 'https://KevinRohn.github.io',
   baseUrl: '/',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'log',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'KevinRohn', // Usually your GitHub org/user name.
