@@ -5,7 +5,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 module.exports = {
   title: 'Kevin`s dev life',
   tagline: 'Dinosaurs are cool',
-  url: 'https://KevinRohn.github.io',
+  url: 'https://rohn.tech',
   baseUrl: '/',
   onBrokenLinks: 'log',
   onBrokenMarkdownLinks: 'warn',
@@ -18,7 +18,7 @@ module.exports = {
       items: [
         { to: '/blog', label: 'Blog', position: 'left' },
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/KevinRohn',
           label: 'GitHub',
           position: 'right',
         },
@@ -44,24 +44,7 @@ module.exports = {
            * Path to data on filesystem relative to site dir.
            */
           path: 'blog',
-          /**
-           * Base url to edit your site.
-           * Docusaurus will compute the final editUrl with "editUrl + relativeDocPath"
-           */
-          editUrl: 'https://github.com/facebook/docusaurus/edit/master/website/',
-          /**
-           * For advanced cases, compute the edit url for each Markdown file yourself.
-           */
-          editUrl: ({ locale, blogDirPath, blogPath, permalink }) => {
-            return `https://github.com/facebook/docusaurus/edit/master/website/${blogDirPath}/${blogPath}`;
-          },
-          /**
-           * Useful if you commit localized files to git.
-           * When Markdown files are localized, the edit url will target the localized file,
-           * instead of the original unlocalized file.
-           * Note: this option is ignored when editUrl is a function
-           */
-          editLocalizedFiles: false,
+
           /**
            * Blog page title for better SEO
            */
@@ -79,7 +62,7 @@ module.exports = {
           /**
            * Title of the blog sidebar
            */
-          blogSidebarTitle: 'All our posts',
+          blogSidebarTitle: 'My posts',
           /**
            * URL route for the blog section of your site.
            * *DO NOT* include a trailing slash.
