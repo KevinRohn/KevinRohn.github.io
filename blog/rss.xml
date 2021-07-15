@@ -2,7 +2,7 @@
 <rss version="2.0">
     <channel>
         <title>Kevin`s dev life Blog</title>
-        <link>https://KevinRohn.github.io/blog</link>
+        <link>https://rohn.tech/blog</link>
         <description>Kevin`s dev life Blog</description>
         <lastBuildDate>Wed, 30 Jun 2021 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
@@ -10,7 +10,7 @@
         <copyright>Kev</copyright>
         <item>
             <title><![CDATA[Welcome to my developer site]]></title>
-            <link>https://KevinRohn.github.io/blog/welcome</link>
+            <link>https://rohn.tech/blog/welcome</link>
             <guid>welcome</guid>
             <pubDate>Wed, 30 Jun 2021 00:00:00 GMT</pubDate>
         </item>

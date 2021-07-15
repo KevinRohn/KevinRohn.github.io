@@ -1,0 +1,1 @@
+(self.webpackChunkkevin_rohn_github_io=self.webpackChunkkevin_rohn_github_io||[]).push([[817],{6353:function(e){"use strict";e.exports=JSON.parse('{"title":"My posts","items":[{"title":"Welcome to my developer site","permalink":"/blog/welcome"}]}')}}]);
