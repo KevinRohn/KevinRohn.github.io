@@ -76,7 +76,7 @@ jobs:
           branch-id: ${{ steps.project.outputs.branch-id }}
           storage-quota: ${{ steps.project.outputs.storage-quota }}
           project: e7b9c973-055a-4835-8bf4-64ab4f33d13c
-          dist-folder: ./
+          dist-folder: ./build
           remote-host: ${{ steps.project.outputs.remote-host }}
           api-key: ${{ secrets.IONOS_API_KEY }}
           service-host: api-eu.ionos.space
