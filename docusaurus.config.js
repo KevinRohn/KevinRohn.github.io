@@ -135,4 +135,17 @@ module.exports = {
       },
     ],
   ],
+  plugins: [
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        redirects: [
+          {
+            to: '/blog', // string
+            from: ['/'], // string | string[]
+          },
+        ],
+      },
+    ],
+  ]
 };
