@@ -7,7 +7,7 @@ rtl = false
 
 title = "Home"
 #logo = "img/author.png"
-description = "personal site of Kevin Rohn" 
+description = "Personal site of Kevin Rohn" 
 copyright = "© 2022 Kevin Rohn"
 
 dateFormat = "2 January 2006"
