@@ -4,7 +4,7 @@ layout: "simple"
 ---
 <script src="https://kit.fontawesome.com/a56e586fb4.js" crossorigin="anonymous"></script>
 {{< alert >}}
-**Note** “Sorry for the dust! The site is still under construction.
+**Note** Sorry for the dust! The site is still under construction.
 {{< /alert >}}
 
 My interests focus on embedded device development and connected services. I have been working as a software developer for over 7 years.
