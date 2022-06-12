@@ -1,6 +1,6 @@
 ---
 title: GitHub action - fetch full release data
-icon: toolbox-regular
+icon: github-brands
 date: 2022-01-04
 weight: 10
 description: >

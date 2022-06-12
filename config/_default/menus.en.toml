@@ -12,8 +12,8 @@
 #
 #[[main]]
 #  name = "Blog"
-#  pageRef = "posts"
-#  weight = 10
+#  pageRef = "blog"
+#  weight = 30
 
 [[main]]
   name = "Projects"
