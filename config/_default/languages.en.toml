@@ -8,7 +8,7 @@ rtl = false
 title = "Home"
 #logo = "img/author.png"
 description = "Personal site of Kevin Rohn" 
-copyright = "© 2022 Kevin Rohn"
+copyright = "© 2023 Kevin Rohn"
 
 dateFormat = "2 January 2006"
 
