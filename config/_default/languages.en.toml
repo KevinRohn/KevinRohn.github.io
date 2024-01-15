@@ -1,16 +1,19 @@
 languageCode = "en"
-languageName = "English"
-displayName = "EN"
-isoCode = "en"
-weight = 1
-rtl = false
-
 title = "Home"
-#logo = "img/author.png"
-description = "Personal site of Kevin Rohn" 
-copyright = "© 2024 Kevin Rohn"
 
-dateFormat = "2 January 2006"
+[languages]
+   [languages.en]
+      [languages.en.params]
+         displayName = "EN"
+         isoCode = "en"
+         languageName = "English"
+         rtl = false
+         dateFormat = "2 January 2006"
+         description = "Personal site of Kevin Rohn" 
+
+weight = 1
+#logo = "img/author.png"
+copyright = "© 2024 Kevin Rohn"
 
 [author]
    name = "Kevin Rohn"
@@ -23,3 +26,4 @@ dateFormat = "2 January 2006"
     { link = "https://rohn.tech/" },
     { linkedin = "https://www.linkedin.com/in/kevin-rohn-157329187/" }
    ]
+
