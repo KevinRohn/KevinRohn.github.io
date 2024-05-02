@@ -53,6 +53,7 @@ The theme currently supports the following languages out of the box:
 | :gb: **English (default)**              | `en`    |
 | :egypt: Arabic                          | `ar`    |
 | :bangladesh: Bengali                    | `bn`    |
+| :bulgaria: Bulgarian                    | `bg`    |
 | :cn: Chinese - Simplified (China)       | `zh-cn` |
 | :taiwan: Chinese - Traditional (Taiwan) | `zh-tw` |
 | :flag-cz: Czech                         | `cs`    |
@@ -65,6 +66,7 @@ The theme currently supports the following languages out of the box:
 | :indonesia: Indonesian                  | `id`    |
 | :it: Italian                            | `it`    |
 | :jp: Japanese                           | `ja`    |
+| :kr: Korean                             | `ko`    |
 | :poland: Polish                         | `pl`    |
 | :brazil: Portuguese (Brazil)            | `pt-br` |
 | :portugal: Portuguese (Portugal)        | `pt-pt` |
@@ -72,7 +74,11 @@ The theme currently supports the following languages out of the box:
 | :ru: Russian                            | `ru`    |
 | :slovakia: Slovak                       | `sk`    |
 | :es: Spanish (Spain)                    | `es`    |
+| :sweden: Swedish                        | `sv`    |
+| :flag-lk: Tamil                         | `ta`    |
 | :tr: Turkish                            | `tr`    |
+| :ukraine: Ukrainian                     | `uk`    |
+| :vietnam: Vietnamese                    | `vi`    |
 
 The default translations can be overridden by creating a custom file in `i18n/[code].yaml` that contains the translation strings. You can also use this method to add new languages. If you'd like to share a new translation with the community, please [open a pull request](https://github.com/jpanther/congo/pulls).
 
@@ -89,22 +95,20 @@ The default file can be used as a template to create additional languages, or re
 <!-- prettier-ignore-start -->
 |Name|Default|Description|
 |---|---|---|
-|`languageCode`|`"en"`|The Hugo language code for this file. It can be a top-level language (ie. `en`) or a sub-variant (ie. `en-au`) and should match the language code in the filename. Hugo expects this value to always be in lowercase. For proper HTML compliance, set the `params.isoCode` parameter which is case-sensitive.|
+|`languageCode`|`"en"`|The Hugo language code for this file. It can be a top-level language (ie. `en`) or a sub-variant (ie. `en-AU`) and should match the language code in the filename.|
 |`languageName`|`"English"`|The name of the language.|
+|`languageDirection`|`"ltr"`|Whether or not this is an RTL language. Set to `"rtl"` to reflow content from right-to-left. Congo fully supports using RTL and LTR languages at the same time and will dynamically adjust to both.|
 |`weight`|`1`|The weight determines the order of languages when building multilingual sites.|
 |`title`|`"Congo"`|The title of the website. This will be displayed in the site header and footer.|
 |`copyright`|_Not set_|A Markdown string containing the copyright message to be displayed in the site footer. If none is provided, Congo will automatically generate a copyright string using the site `title`.|
-|`params.isoCode`|`"en"`|The ISO language code for HTML metadata purposes. It can be a top-level language (ie. `en`) or a sub-variant (ie. `en-AU`).|
-|`params.displayName`|`"EN"`|The name used when the language appears on the website.|
-|`params.rtl`|`false`|Whether or not this is a RTL language. Set to `true` to reflow content from right-to-left. Congo fully supports using RTL and LTR languages at the same time and will dynamically adjust to both.|
 |`params.dateFormat`|`"2 January 2006"`|How dates are formatted in this language. Refer to the [Hugo docs](https://gohugo.io/functions/format/#gos-layout-string) for acceptable formats.|
 |`params.mainSections`|_Not set_|The sections that should be displayed in the recent articles list. If not provided the section with the greatest number of articles is used.|
 |`params.description`|_Not set_|The website description. This will be used in the site metadata.|
-|`author.name`|_Not set_|The author's name. This will be displayed in article footers, and on the homepage when the profile layout is used.|
-|`author.image`|_Not set_|Path to the image file of the author. The image should be a 1:1 aspect ratio and placed in the site's `assets/` folder.|
-|`author.headline`|_Not set_|A Markdown string containing the author's headline. It will be displayed on the profile homepage under the author's name.|
-|`author.bio`|_Not set_|A Markdown string containing the author's bio. It will be displayed in article footers.|
-|`author.links`|_Not set_|The links to display alongside the author's details. The config file contains example links which can simply be uncommented to enable. The order that the links are displayed is determined by the order they appear in the array. Custom links can be added by providing corresponding SVG icon assets in `assets/icons/`.|
+|`params.author.name`|_Not set_|The author's name. This will be displayed in article footers, and on the homepage when the profile layout is used.|
+|`params.author.image`|_Not set_|Path to the image file of the author. The image should be a 1:1 aspect ratio and placed in the site's `assets/` folder.|
+|`params.author.headline`|_Not set_|A Markdown string containing the author's headline. It will be displayed on the profile homepage under the author's name.|
+|`params.author.bio`|_Not set_|A Markdown string containing the author's bio. It will be displayed in article footers.|
+|`params.author.links`|_Not set_|The links to display alongside the author's details. The config file contains example links which can simply be uncommented to enable. The order that the links are displayed is determined by the order they appear in the array. Custom links can be added by providing corresponding SVG icon assets in `assets/icons/`.|
 <!-- prettier-ignore-end -->
 
 ### Menus
@@ -129,7 +133,9 @@ Many of the article defaults here can be overridden on a per article basis by sp
 |`autoSwitchAppearance`|`true`|Whether the theme appearance automatically switches based upon the visitor's operating system preference. Set to `false` to force the site to always use the `defaultAppearance`.|
 |`enableSearch`|`false`|Whether site search is enabled. Set to `true` to enable search functionality. Note that the search feature depends on the `outputs.home` setting in the [site configuration](#site-configuration) being set correctly.|
 |`enableCodeCopy`|`false`|Whether copy-to-clipboard buttons are enabled for `<code>` blocks. The `highlight.noClasses` parameter must be set to `false` for code copy to function correctly. Read more about [other configuration files](#other-configuration-files) below.|
-|`enableImageLazyLoading`|`true`|Whether images should be marked for lazy loading by the broswer.|
+|`enableImageLazyLoading`|`true`|Whether images should be marked for lazy loading by the browser.|
+|`enableImageWebp`|`true`|Whether images should be output in the more performant WebP format.|
+|`enableQuicklink`|`true`|Whether the [Quicklink](https://getquick.link/) library should be included in the site. Quicklink prefetches links based upon the user's viewport and leads to faster page navigation.|
 |`robots`|_Not set_|String that indicates how robots should handle your site. If set, it will be output in the page head. Refer to [Google's docs](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag#directives) for valid values.|
 |`fingerprintAlgorithm`|`"sha256"`|String that indicates which hashing algorithm is used when fingerprinting assets. Valid options include `md5`, `sha256`, `sha384` and `sha512`.|
 |`header.layout`|`"basic"`|The layout of the page header and menu. Valid values are `basic`, `hamburger`, `hybrid` or `custom`. When set to `custom`, you must provide your own layout by creating a `/layouts/partials/header/custom.html` file.|
@@ -159,7 +165,7 @@ Many of the article defaults here can be overridden on a per article basis by sp
 |`article.showTaxonomies`|`false`|Whether or not the taxonomies related to this article are displayed.|
 |`article.showWordCount`|`false`|Whether or not article word counts are displayed.|
 |`article.showComments`|`false`|Whether or not the [comments partial]({{< ref "partials#comments" >}}) is included after the article footer.|
-|`article.sharingLinks`|_Not set_|Which sharing links to display at the end of each article. When not provided, or set to `false` no links will be displayed.|
+|`article.sharingLinks`|_Not set_|An array of sharing links to display at the end of each article. Valid options include `facebook`, `x-twitter`, `mastodon`, `pinterest`, `reddit`, `linkedin`, `email`, `telegram` and `line`. When not provided, or set to `false`, no links will be displayed.|
 |`list.showBreadcrumbs`|`false`|Whether or not breadcrumbs are displayed in the header on list pages.|
 |`list.showTableOfContents`|`false`|Whether or not the table of contents is displayed on list pages.|
 |`list.showTaxonomies`|`false`|Whether or not the taxonomies related to this article are displayed on list pages.|
@@ -169,7 +175,9 @@ Many of the article defaults here can be overridden on a per article basis by sp
 |`sitemap.excludedKinds`|`["taxonomy", "term"]`|Kinds of content that should be excluded from the generated `/sitemap.xml` file. Refer to the [Hugo docs](https://gohugo.io/templates/section-templates/#page-kinds) for acceptable values.|
 |`taxonomy.showTermCount`|`true`|Whether or not the number of articles within a taxonomy term is displayed on the taxonomy listing.|
 |`fathomAnalytics.site`|_Not set_|The site code generated by Fathom Analytics for the website. Refer to the [Analytics docs]({{< ref "partials#analytics" >}}) for more details.|
-|`fathomAnalytics.domain`|_Not set_|If using a custom domain with Fathom Analytics, provide it here to serve `script.js` from the custom domain.|
+|`plausibleAnalytics.domain`|_Not set_|Enter the domain of the website you want to track. Refer to the [Analytics docs]({{< ref "partials#analytics" >}}) for more details.|
+|`plausibleAnalytics.event`|_Not set_|Plausible api event proxied URL. Refer to the [Analytics docs]({{< ref "partials#analytics" >}}) for more details.|
+|`plausibleAnalytics.script`|_Not set_|Plausible analysis script proxied URL. Refer to the [Analytics docs]({{< ref "partials#analytics" >}}) for more details.|
 |`verification.google`|_Not set_|The site verification string provided by Google to be included in the site metadata.|
 |`verification.bing`|_Not set_|The site verification string provided by Bing to be included in the site metadata.|
 |`verification.pinterest`|_Not set_|The site verification string provided by Pinterest to be included in the site metadata.|
@@ -180,4 +188,4 @@ Many of the article defaults here can be overridden on a per article basis by sp
 
 The theme also includes a `markup.toml` configuration file. This file contains some important parameters that ensure that Hugo is correctly configured to generate sites built with Congo.
 
-Always ensure this file is present in the config directory and that the required values are set. Failure to do so may cause certain features to fucntion incorrectly and could result in unintended behaviour.
+Always ensure this file is present in the config directory and that the required values are set. Failure to do so may cause certain features to function incorrectly and could result in unintended behaviour.
