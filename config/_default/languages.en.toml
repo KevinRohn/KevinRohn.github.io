@@ -1,21 +1,16 @@
 languageCode = "en"
-title = "Home"
-
-[languages]
-   [languages.en]
-      [languages.en.params]
-         displayName = "EN"
-         isoCode = "en"
-         languageName = "English"
-         rtl = false
-         dateFormat = "2 January 2006"
-         description = "Personal site of Kevin Rohn" 
-
+languageName = "English"
+languageDirection = "ltr"
 weight = 1
-#logo = "img/author.png"
+
+[params]
+   isoCode = "en"
+   dateFormat = "2 January 2006"
+   description = "Personal site of Kevin Rohn" 
+
 copyright = "© 2024 Kevin Rohn"
 
-[author]
+[params.author]
    name = "Kevin Rohn"
    image = "img/author.jpg"
    headline = "Software developer"

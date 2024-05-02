@@ -1,7 +1,5 @@
 ---
 title: "Projects"
-externalName: "GitHub"
-externalUrl: "https://github.com/KevinRohn"
 ---
 
 {{< alert "info" >}}

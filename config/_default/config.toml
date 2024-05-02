@@ -1,10 +1,11 @@
+theme = "congo"
 # -- Site Configuration --
 # Refer to the theme docs for more details about each of these parameters.
 # https://jpanther.github.io/congo/docs/getting-started/
 
 baseURL = "https://rohn.tech"
 defaultContentLanguage = "en"
-
+title = "Home"
 enableRobotsTXT = true
 paginate = 10
 summaryLength = 0
