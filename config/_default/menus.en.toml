@@ -21,16 +21,21 @@
   weight = 10
 
 [[main]]
+  name = "Blog"
+  pageRef = "blog"
+  weight = 20
+
+[[main]]
   name = "About"
   pageRef = "about"
-  weight = 20
+  weight = 30
 
 [[main]]
   identifier = "search"
   weight = 99
   [main.params]
     action = "search"
-    
+
 #[[main]]
 #  name = "Tags"
 #  pageRef = "tags"
