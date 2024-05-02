@@ -21,7 +21,7 @@ These instructions will get you up and running using Hugo and Congo from a compl
 If you haven't used Hugo before, you will need to [install it onto your local machine](https://gohugo.io/getting-started/installing). You can check if it's already installed by running the command `hugo version`.
 
 {{< alert >}}
-Make sure you are using **Hugo version 0.87.0** or later as the theme takes advantage of some of the latest Hugo features.
+Make sure you are using **Hugo extended version 0.87.0** or later as the theme takes advantage of some of the latest Hugo features.
 {{< /alert >}}
 
 You can find detailed installation instructions for your platform in the [Hugo docs](https://gohugo.io/getting-started/installing).
@@ -150,6 +150,10 @@ hugo mod get -u
 Hugo will automatically update any modules that are required for your project. It does this by inspecting your `module.toml` and `go.mod` files. If you have any issues with the update, check to ensure these files are still configured correctly.
 
 Then simply rebuild your site and check everything works as expected.
+
+{{< alert >}}
+When updating modules, sometimes Hugo will cache an older version of the theme. If this happens, clear your local cache by using the `hugo mod clean` command and then rebuild your site.
+{{< /alert >}}
 
 ### Update using git
 
