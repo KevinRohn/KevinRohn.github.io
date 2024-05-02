@@ -25,6 +25,12 @@
   pageRef = "about"
   weight = 20
 
+[[main]]
+  identifier = "search"
+  weight = 99
+  [main.params]
+    action = "search"
+    
 #[[main]]
 #  name = "Tags"
 #  pageRef = "tags"
